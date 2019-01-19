@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "ECS_CLUSTER=cluster-ecs" > /etc/ecs/ecs.config
+
+AmazonEC2ContainerServiceforEC2Role
