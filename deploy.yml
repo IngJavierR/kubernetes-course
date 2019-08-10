@@ -14,3 +14,17 @@ spec:
         image: ingjavierr/gateway-course:1.0
         ports:
         - containerPort: 8000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: catalogs-svc
+  labels:
+    app: catalogs
+spec:
+  type: NodePort
+  ports:
+  - port: 8000
+    protocol: TCP
+  selector:
+    app: hello-world
